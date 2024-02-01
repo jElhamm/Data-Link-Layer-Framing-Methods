@@ -23,4 +23,17 @@ int byteStuffing(const char* input, int inputLen, char* output) {
     }
     return j;
 }
- 
+
+// Function to perform byte unstuffing
+int byteUnstuffing(const char* input, int inputLen, char* output) {
+    int i, j;
+    j = 0;
+    for (i = 0; i < inputLen; i++) {
+        // If input byte is ESCAPE_BYTE, skip it and take the next byte as is
+        if (input[i] == ESCAPE_BYTE) {
+            i++;
+        }
+        output[j++] = input[i];
+    }
+    return j;
+}

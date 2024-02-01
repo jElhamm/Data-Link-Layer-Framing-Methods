@@ -9,6 +9,7 @@
 #define ESCAPE_BYTE 0x7D
 
 int byteStuffing(const char* input, int inputLen, char* output);
+int byteUnstuffing(const char* input, int inputLen, char* output);
 
 #endif
 
@@ -19,3 +20,7 @@ int byteStuffing(const char* input, int inputLen, char* output);
   * It takes an input byte array (input), its length (inputLen), and an output byte array (output).
   * The function returns an integer representing the length of the output array.
  
+  * The byteUnstuffing function prototype declares a function that performs byte unstuffing.
+  * It takes the input byte array (input), its length (inputLen), and an output byte array (output).
+  * The function returns an integer representing the length of the output array.
+ **/
