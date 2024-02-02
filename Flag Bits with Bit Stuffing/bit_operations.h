@@ -8,6 +8,7 @@
 
 
 void bit_stuffing(char *input, char *output);
+void bit_destuffing(char *input, char *output);
 
 #endif
 
@@ -18,4 +19,7 @@ void bit_stuffing(char *input, char *output);
 
   *      1. `void bit_stuffing(char *input, char *output);`
   *          This function performs bit stuffing on the input data stored in the `input` array and saves the result in the `output` array.
- 
+
+  *      2. `void bit_destuffing(char *input, char *output);`
+  *          This function performs bit destuffing on the input data stored in the `input` array and saves the result in the `output` array.
+**/

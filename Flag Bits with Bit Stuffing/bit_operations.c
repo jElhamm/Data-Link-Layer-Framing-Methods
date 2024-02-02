@@ -33,4 +33,16 @@ void bit_stuffing(char *input, char *output) {
     *output = '\0';                                     // Add null terminator at the end of the output
     printf("Number of stuffed bits: %d\n", count);
 }
- 
+
+// Implements bit destuffing to reverse the bit stuffing operations.
+void bit_destuffing(char *input, char *output) {
+    while (*input != '\0' && *(input + 1) != '\0' && (*(input + 1) != FLAG)) {
+        if (*input == ESCAPE) {
+            input++;                                    // Skip ESCAPE character
+            *output++ = *input++ ^ XOR;                 // XOR'ed with 0x20
+        } else {
+            *output++ = *input++;                       // Copy the byte as it is
+        }
+    }
+    *output = '\0';                                     // Add null terminator at the end of the output
+}
